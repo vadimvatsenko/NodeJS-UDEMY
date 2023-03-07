@@ -1,0 +1,30 @@
+<h1>Busket</h1>
+<div id="card">
+{{#if courses.length}}
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Counters</th>
+            <th>Remove</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each courses}}
+        <tr>
+            <td>{{title}}</td>
+            <td>{{count}}</td>
+            <td>
+                <button class="btn btn-small js-remove" data-id="{{id}}">Delite</button>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<p><strong>Price</strong><span class="price">{{price}}</span></p>
+
+{{else}}
+<p>Busket Empty</p>
+
+{{/if}}
+</div>
